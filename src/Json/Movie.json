@@ -1,0 +1,48 @@
+[{
+    "ID": 1,
+    "Name": "Hành Động",
+    "Movie": [
+      {
+        "ID": 1,
+        "Name": "Titanic",
+        "Thumbnail": "https://duhocvietglobal.com/wp-content/uploads/2018/12/dat-nuoc-va-con-nguoi-anh-quoc.jpg",
+        "Description": "Desc tinanci",
+        "AvgRating": 6,
+        "Comment": [
+          {
+            "ID": 1,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          },
+          {
+            "ID": 2,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          }
+        ]
+      },
+      {
+        "ID": 3,
+        "Name": "Titanic",
+        "Thumbnail": "Http://",
+        "Description": "Desc tinanci",
+        "AvgRating": 6,
+        "Comment": [
+          {
+            "ID": 5,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          },
+          {
+            "ID": 5,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          }
+        ]
+      }
+    ]
+  }]
