@@ -10,16 +10,26 @@ import Register from './component/Register';
 
 function App() {
   // const [movie, setMovie] = useState(Data)
-  console.log(Data);
+  // console.log(Data);
 
   return (
 
     <div>
-      <Link to="/Login">Login</Link>
-      {/* <Link to ="/Login"></Link> */}
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand">Phim Hay</a>
 
-      <Link to="/Register">Register</Link>
+                <div class="collapse navbar-collapse" >
+                    <Link to="/Login" >Đăng nhập</Link>
+                    /
+                    <Link to="/Register" >Đăng kí </Link>
+                </div>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
+                </form>
+
+            </nav>
 
       <Routes>
         <Route path='/' index element={<Home />}></Route>
@@ -27,10 +37,12 @@ function App() {
         <Route path='/MovieDetail/:MovieID' element={<MovieDetail />}></Route>
         <Route path='/Register' element={<Register />}></Route>
       </Routes>
+      {/* <Link to="/Login">Login</Link>
+      <Link to="/Register">Register</Link> */}
     </div>
 
 
-  
+
 
   );
 
