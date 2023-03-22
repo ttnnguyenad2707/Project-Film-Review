@@ -1,42 +1,48 @@
-[
-    {
-        "Id": 1,
-        "Name": "Ve nha di con",
-        "Thumbnail": "http://",
-        "Description": "Ve nha di con Description",
-        "AvgRating": 3,
-        "CategoryID": 2
-    },
-    {
-        "Id": 2,
+[{
+    "ID": 1,
+    "Name": "Hành Động",
+    "Movie": [
+      {
+        "ID": 1,
         "Name": "Titanic",
-        "Thumbnail": "http://",
-        "Description": "Titanic Description",
-        "AvgRating": 4,
-        "CategoryID": 1
-    },
-    {
-        "Id": 3,
-        "Name": "Vua hải tặc",
-        "Thumbnail": "http://",
-        "Description": "Vua hải tặc Description",
-        "AvgRating": 2.5,
-        "CategoryID": 4
-    },
-    {
-        "Id": 4,
-        "Name": "Nỗi ám ảnh",
-        "Thumbnail": "http://",
-        "Description": "NAA Description",
-        "AvgRating": 4,
-        "CategoryID": 3
-    },
-    {
-        "Id": 5,
-        "Name": "Mặt nạ gương",
-        "Thumbnail": "http://",
-        "Description": "MNG Description",
-        "AvgRating": 5,
-        "CategoryID": 5
-    }
-]
+        "Thumbnail": "https://duhocvietglobal.com/wp-content/uploads/2018/12/dat-nuoc-va-con-nguoi-anh-quoc.jpg",
+        "Description": "Desc tinanci",
+        "AvgRating": 6,
+        "Comment": [
+          {
+            "ID": 1,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          },
+          {
+            "ID": 2,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          }
+        ]
+      },
+      {
+        "ID": 3,
+        "Name": "Titanic",
+        "Thumbnail": "Http://",
+        "Description": "Desc tinanci",
+        "AvgRating": 6,
+        "Comment": [
+          {
+            "ID": 5,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          },
+          {
+            "ID": 5,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment"
+          }
+        ]
+      }
+    ]
+  }]
