@@ -72,8 +72,8 @@ export default function Home() {
 
                                                             <div>{category.Name} </div>
                                                             <div>Đánh giá: {movie.AvgRating} </div>
-                                                        </Link>
                                                         <button class="btn btn-outline-primary">đánh giá</button>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
