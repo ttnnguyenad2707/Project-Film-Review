@@ -1,5 +1,5 @@
 import { Fragment, useContext, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Category from '../Json/Movie.json'
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     const [categoryLoad, setCategoryLoad] = useState(Category)
     const [showSearch, setShowSearch] = useState(false)
     const [movie, setMovie] = useState([])
-
+    
     const handleSearch = (search) => {
 
         if (search == "") {
@@ -29,8 +29,16 @@ export default function Home() {
         })
         setMovie(searchList);
     }
-
-
+    var checkLogin = true;
+    var Account;
+    if(JSON.parse(sessionStorage.getItem("Account"))!=null){
+        Account = JSON.parse(sessionStorage.getItem("Account"))[0];
+    }
+    let navigate = useNavigate();
+    if(Account == undefined){
+        checkLogin= false
+    }
+    
 
     return (
 
@@ -61,11 +69,9 @@ export default function Home() {
 
                                         <div className="card  m-2  ">
                                             <div className="card-body ">
-
-
                                                 <div className="">
                                                     <div>
-                                                        <Link to={`/MovieDetail/${movie.ID}`}>
+                                                        <Link to={checkLogin == true ?  `/MovieDetail/${movie.ID}` : "/Login"}>
                                                             <div>Tên phim: {movie.Name} </div>
 
                                                             <img src={movie.Thumbnail} />

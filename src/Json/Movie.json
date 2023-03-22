@@ -31,18 +31,8 @@
         "Description": "Desc batman",
         "AvgRating": 7,
         "Comment": [
-          {
-            "ID": 3,
-            "UserID": 3,
-            "Rating": 10,
-            "Content": "Comment 2"
-          },
-          {
-            "ID": 4,
-            "UserID": 4,
-            "Rating": 10,
-            "Content": "Comment 3"
-          }
+          
+          
         ]
       },
       {
@@ -52,12 +42,7 @@
         "Description": "Desc spiderman",
         "AvgRating": 7,
         "Comment": [
-          {
-            "ID": 5,
-            "UserID": 3,
-            "Rating": 10,
-            "Content": "Comment 5"
-          }
+          
         ]
       }
     ]
@@ -73,12 +58,7 @@
         "Description": "Desc Titanic",
         "AvgRating": 3,
         "Comment": [
-          {
-            "ID": 6,
-            "UserID": 1,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -88,12 +68,7 @@
         "Description": "Desc ve nha di con",
         "AvgRating": 3,
         "Comment": [
-          {
-            "ID": 7,
-            "UserID": 3,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -103,12 +78,7 @@
         "Description": "Desc bo gia",
         "AvgRating": 4,
         "Comment": [
-          {
-            "ID": 8,
-            "UserID": 2,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       }
     ]
@@ -124,12 +94,7 @@
         "Description": "Desc Annabelle",
         "AvgRating": 5.5,
         "Comment": [
-          {
-            "ID": 9,
-            "UserID": 1,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       
@@ -140,12 +105,7 @@
         "Description": "Dem thu tam",
         "AvgRating": 5.5,
         "Comment": [
-          {
-            "ID": 11,
-            "UserID": 1,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -155,12 +115,7 @@
         "Description": "The black phone",
         "AvgRating": 10,
         "Comment": [
-          {
-            "ID": 12,
-            "UserID": 5,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       }
     ]
@@ -176,12 +131,7 @@
         "Description": "Desc Conan",
         "AvgRating": 5.5,
         "Comment": [
-          {
-            "ID": 13,
-            "UserID": 4,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -191,12 +141,7 @@
         "Description": "Desc Doreamon",
         "AvgRating": 8,
         "Comment": [
-          {
-            "ID": 14,
-            "UserID": 3,
-            "Rating": 5,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -206,12 +151,7 @@
         "Description": "Desc onepiece",
         "AvgRating": 4,
         "Comment": [
-          {
-            "ID": 15,
-            "UserID": 3,
-            "Rating": 4,
-            "Content": "Comment 1"
-          }
+          
         ]
       }
     ]
@@ -227,12 +167,7 @@
         "Description": "Desc Stowaway",
         "AvgRating": 5.5,
         "Comment": [
-          {
-            "ID": 16,
-            "UserID": 4,
-            "Rating": 5.5,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -242,12 +177,7 @@
         "Description": "Desc gozdilla",
         "AvgRating": 3,
         "Comment": [
-          {
-            "ID": 17,
-            "UserID": 2,
-            "Rating": 3,
-            "Content": "Comment 1"
-          }
+          
         ]
       },
       {
@@ -257,12 +187,7 @@
         "Description": "Desc kingkong",
         "AvgRating": 9,
         "Comment": [
-          {
-            "ID": 18,
-            "UserID": 2,
-            "Rating": 9,
-            "Content": "Comment 1"
-          }
+         
         ]
       }
     ]
