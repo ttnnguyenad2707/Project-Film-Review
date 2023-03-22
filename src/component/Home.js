@@ -2,10 +2,12 @@ import { Fragment, useContext, useState } from "react"
 import { Link } from "react-router-dom";
 import Category from '../Json/Movie.json'
 import Account from '../Json/Account.json';
+import ListFilm from "./ListFilm";
 export default function Home() {
     const [category, setCategory] = useState(Category)
     const [account, setaccount] = useState(Account);
     //load movie
+
     const [categoryLoad, setCategoryLoad] = useState(Category)
     const [showSearch, setShowSearch] = useState(false)
     const [movie, setMovie] = useState([])
@@ -36,13 +38,16 @@ export default function Home() {
 
         <div className="container-fluid">
 
-            <div class="row">
+            <div className="row">
                 <div className="col-md-2">
                     <h1 style={{ color: "red" }} > Thể loại </h1> <hr />
                     {categoryLoad.map(cat =>
                         <Fragment>
-                            <a style={{color: "red"}} href="#">{cat.Name}</a>
+                            <Link to={`/ListFilm/${cat.ID}`}>
+                            
+                            <p style={{color: "red"}} >{cat.Name}</p>
                             <br></br>
+                            </Link>
                         </Fragment>
                     )}
                 </div>
@@ -53,17 +58,17 @@ export default function Home() {
                     <h1 style={{ color: "red" }}> Danh sách phim</h1> <hr />
 
 
-                    <div class="row">
+                    <div className="row">
                         {categoryLoad.map((category) => (
                             <Fragment>
                                 {
                                     category.Movie.map((movie) => (
 
-                                        <div class="card  m-2  ">
-                                            <div class="card-body ">
+                                        <div className="card  m-2  ">
+                                            <div className="card-body ">
 
 
-                                                <div class="">
+                                                <div className="">
                                                     <div>
                                                         <Link to={`/MovieDetail/${movie.ID}`}>
                                                             <div>Tên phim: {movie.Name} </div>
@@ -73,7 +78,7 @@ export default function Home() {
 
                                                             <div>{category.Name} </div>
                                                             <div>Đánh giá: {movie.AvgRating} </div>
-                                                        <button class="btn btn-outline-primary">đánh giá</button>
+                                                        <button className="btn btn-outline-primary">đánh giá</button>
                                                         </Link>
                                                     </div>
                                                 </div>

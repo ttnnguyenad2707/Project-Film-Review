@@ -10,10 +10,12 @@ export default function Register() {
     },[])
     let navigate = useNavigate ();
     const checkAccountexit = () => {
-        const Name = document.getElementById('InputName').value;
+        const FullName = document.getElementById('InputName').value;
+        const Address = document.getElementById('Address').value;
         const Email = document.getElementById('InputEmail1').value;
         const Password = document.getElementById('InputPassword').value;
         const radios = document.getElementsByName('option');
+        const ID = account.length+1;
         let value;
         for (let i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
@@ -28,7 +30,7 @@ export default function Register() {
             alert('Email already exit!!!');
         }
         else {
-            const newaccount = { Name, Email, Password, Gender: value };
+            const newaccount = { ID,FullName, Email, Password, Gender: value,Address };
             account.push(newaccount);
             setAccount(account);
             localStorage.setItem('dataUser', JSON.stringify(account));
@@ -49,6 +51,10 @@ export default function Register() {
                         <div className="form-group">
                             <label for="InputName">Username</label>
                             <input type="text" className="form-control" id="InputName" placeholder="Enter name"/>
+                        </div>
+                        <div className="form-group">
+                            <label for="InputName">Address</label>
+                            <input type="text" className="form-control" id="Address" placeholder="Address"/>
                         </div>
                         <div className="form-group">
                             <label for="InputPassword1">Password</label>

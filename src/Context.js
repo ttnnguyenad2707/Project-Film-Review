@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { createContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Category from './Json/Movie.json'
-
+import ListAccount from './Json/Account.json'
 const Context = createContext();
 
 export default function Provider({ children })
@@ -13,11 +13,14 @@ export default function Provider({ children })
     Category.map((category)=>{
 
         category.Movie.map(movieItem=>{ 
-            movie.push(movieItem)
+            movie.push({...movieItem,Category:category.Name})
         })
 
     })
+
+
    
+    
     const value = {
         movie
     }
