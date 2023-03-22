@@ -4,7 +4,6 @@
         "Password": "Long123",
         "Email": "Long123@gmail.com",
         "PhoneNumber": "012345678",
-        "Gender": "Male",
-        "Address": "Hung Yen"
+        "Gender": "Male"
     }
 ]
