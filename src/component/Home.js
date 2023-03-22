@@ -34,21 +34,9 @@ export default function Home() {
     return (
 
         <div className="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand">Phim Hay</a>
 
-                <div class="collapse navbar-collapse" >
-                    <Link to="/Login" >Đăng nhập</Link>
-                    /
-                    <Link to="/Register" >Đăng kí </Link>
-                </div>
-                <form class="form-inline">
-                    <input onChange={e => handleSearch(e.target.value)} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </nav>
             <div class="row">
-                <div className="col-3">
+                <div className="col-md-2">
                     <h1 style={{ color: "red" }} > Thể loại </h1> <hr />
                     {categoryLoad.map(cat =>
                         <Fragment>
@@ -57,42 +45,34 @@ export default function Home() {
                         </Fragment>
                     )}
                 </div>
-                <div className="col-9">
+
+
+                <div className="col-md-10">
+
                     <h1 style={{ color: "red" }}> Danh sách phim</h1> <hr />
+
+
                     <div class="row">
-                        {showSearch == true && movie.map(movie => (
-                            <div class="card col-4" >
-                                <div class="card-body ">
-                                    <div class="">
-                                        <div>
-                                            <div>Tên phim: {movie.Name} </div>
-
-                                            <img src={movie.Thumbnail} />
-                                            <div> Mô tả: {movie.Description} </div>
-
-                                            <div>{category.Name} </div>
-                                            <div>Đánh giá: {movie.AvgRating} </div>
-                                            <button class="btn btn-outline-primary">đánh giá</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                        {showSearch == false && categoryLoad.map((category) => (
+                        {categoryLoad.map((category) => (
                             <Fragment>
                                 {
                                     category.Movie.map((movie) => (
-                                        <div class="card col-4" >
+
+                                        <div class="card  m-2  ">
                                             <div class="card-body ">
+
+
                                                 <div class="">
                                                     <div>
-                                                        <div>Tên phim: {movie.Name} </div>
+                                                        <Link to={`/MovieDetail/${movie.ID}`}>
+                                                            <div>Tên phim: {movie.Name} </div>
 
-                                                        <img src={movie.Thumbnail} />
-                                                        <div> Mô tả: {movie.Description} </div>
+                                                            <img src={movie.Thumbnail} />
+                                                            <div> Mô tả: {movie.Description} </div>
 
-                                                        <div>{category.Name} </div>
-                                                        <div>Đánh giá: {movie.AvgRating} </div>
+                                                            <div>{category.Name} </div>
+                                                            <div>Đánh giá: {movie.AvgRating} </div>
+                                                        </Link>
                                                         <button class="btn btn-outline-primary">đánh giá</button>
                                                     </div>
                                                 </div>
@@ -102,6 +82,7 @@ export default function Home() {
                                     ))
                                 }
                             </Fragment>
+
                         ))}
                     </div>
                 </div>
