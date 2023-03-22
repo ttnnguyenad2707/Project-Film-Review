@@ -1,15 +1,16 @@
 import { Fragment, useContext, useState } from "react"
 import { Link } from "react-router-dom";
 import Category from '../Json/Movie.json'
-
+import Account from '../Json/Account.json';
 export default function Home() {
-
     const [category, setCategory] = useState(Category)
+    const [account, setaccount] = useState(Account);
     //load movie
     const [categoryLoad, setCategoryLoad] = useState(Category)
     const [showSearch, setShowSearch] = useState(false)
     const [movie, setMovie] = useState([])
-
+    const saveAccount = JSON.stringify(account);
+    localStorage.setItem("dataUser", saveAccount);
     const handleSearch = (search) => {
 
         if (search == "") {
