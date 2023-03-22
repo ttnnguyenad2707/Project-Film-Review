@@ -9,7 +9,6 @@ export default function Login() {
         const email = document.getElementById('InputEmail1').value;
         const password = document.getElementById('InputPassword').value;
         const checkAccount = account.filter((a)=> a.Email == email && a.Password == password);
-        console.log(checkAccount);
         if(checkAccount.length>0){
             sessionStorage.setItem('Account', JSON.stringify(checkAccount) );
             navigate('/');

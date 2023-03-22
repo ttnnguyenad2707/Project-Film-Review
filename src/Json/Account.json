@@ -1,8 +1,18 @@
 [
     {
-        "Username": "Long",
-        "Password": "Long123",
+        "ID" : 1,
+        "FullName": "Long",
+        "Password": "123",
         "Email": "Long123@gmail.com",
+        "PhoneNumber": "012345678",
+        "Gender": "Male",
+        "Address": "Hung Yen"
+    },
+    {
+        "ID" : 2,
+        "FullName": "Nguyen",
+        "Password": "123",
+        "Email": "admin@gmail.com",
         "PhoneNumber": "012345678",
         "Gender": "Male",
         "Address": "Hung Yen"
