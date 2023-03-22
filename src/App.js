@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Data from './Json/movie.json'
+import Data from './Json/Movie.json'
 import { useState } from 'react';
 import { BrowserRouter as router, Routes, Route, Link } from 'react-router-dom';
 import Login from './component/Login';
@@ -15,9 +15,6 @@ function App() {
   return (
 
     <div>
-
-
-
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
