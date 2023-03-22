@@ -13,6 +13,7 @@ function App() {
   console.log(Data);
 
   return (
+
     <div>
       <Link to="/Login">Login</Link>
       {/* <Link to ="/Login"></Link> */}
@@ -30,6 +31,7 @@ function App() {
 
 
   
+
   );
 
 }
