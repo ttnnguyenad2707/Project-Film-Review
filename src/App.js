@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Data from './Json/movie.json'
+import Data from './Json/Movie.json'
 import { useState } from 'react';
 import { BrowserRouter as router, Routes, Route, Link } from 'react-router-dom';
 import Login from './component/Login';
@@ -22,7 +22,7 @@ function App() {
 
 
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' index element={<Home />}></Route>
         <Route path='/Login' element={<Login />}></Route>
         <Route path='/MovieDetail/:MovieID' element={<MovieDetail />}></Route>
         <Route path='/Register' element={<Register />}></Route>
