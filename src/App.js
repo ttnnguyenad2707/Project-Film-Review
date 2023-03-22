@@ -10,15 +10,13 @@ import Register from './component/Register';
 
 function App() {
   // const [movie, setMovie] = useState(Data)
-  console.log(Data);
+  // console.log(Data);
 
   return (
 
     <div>
-      <Link to="/Login">Login</Link>
-      {/* <Link to ="/Login"></Link> */}
 
-      <Link to="/Register">Register</Link>
+
 
 
       <Routes>
@@ -27,10 +25,12 @@ function App() {
         <Route path='/MovieDetail/:MovieID' element={<MovieDetail />}></Route>
         <Route path='/Register' element={<Register />}></Route>
       </Routes>
+      {/* <Link to="/Login">Login</Link>
+      <Link to="/Register">Register</Link> */}
     </div>
 
 
-  
+
 
   );
 
