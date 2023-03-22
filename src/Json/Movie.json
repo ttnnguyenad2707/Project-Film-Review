@@ -132,21 +132,7 @@
           }
         ]
       },
-      {
-        "ID": 7,
-        "Name": "Anabelle",
-        "Thumbnail": "https://danviet.mediacdn.vn/zoom/700_438/2021/4/15/794-161845783939699016700-crop-16184581679311657620629.jpg",
-        "Description": "Desc Annabelle",
-        "AvgRating": 5.5,
-        "Comment": [
-          {
-            "ID": 10,
-            "UserID": 1,
-            "Rating": 10,
-            "Content": "Comment 1"
-          }
-        ]
-      },
+      
       {
         "ID": 8,
         "Name": "Đêm thứ 8",

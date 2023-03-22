@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Data from './Json/movie.json'
+import Data from './Json/Movie.json'
 import { useState } from 'react';
 import { BrowserRouter as router, Routes, Route, Link } from 'react-router-dom';
 import Login from './component/Login';
@@ -10,17 +10,11 @@ import Register from './component/Register';
 
 function App() {
   // const [movie, setMovie] = useState(Data)
-  console.log(Data);
+  // console.log(Data);
 
   return (
 
     <div>
-      <h1>HaiTG</h1>
-      <Link to="/Login">Login</Link>
-      {/* <Link to ="/Login"></Link> */}
-
-      <Link to="/Register">Register</Link>
-
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
@@ -28,10 +22,12 @@ function App() {
         <Route path='/MovieDetail/:MovieID' element={<MovieDetail />}></Route>
         <Route path='/Register' element={<Register />}></Route>
       </Routes>
+      {/* <Link to="/Login">Login</Link>
+      <Link to="/Register">Register</Link> */}
     </div>
 
 
-  
+
 
   );
 
