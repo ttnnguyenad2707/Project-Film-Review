@@ -1,9 +1,14 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom';
 import data from "../Json/Account.json";
 import '../Login.css';
 export default function Login() {
-    const [account,setAccount] = useState(data);
+    const [account,setAccount] = useState([]);
+    useEffect(() => {
+        const getData = JSON.parse(localStorage.getItem('dataUser'));
+        setAccount(getData);
+        console.log(getData);
+    },[])
     let navigate = useNavigate ();
     const checkAccount = () => {
         const email = document.getElementById('InputEmail1').value;
@@ -15,7 +20,7 @@ export default function Login() {
             navigate('/');
         }
         else {
-            alert("wrong !")
+            alert("Account does not exit !")
         }
 
 
