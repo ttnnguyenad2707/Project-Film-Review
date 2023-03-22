@@ -15,6 +15,7 @@ function App() {
   return (
 
     <div>
+      <h1>HaiTG</h1>
       <Link to="/Login">Login</Link>
       {/* <Link to ="/Login"></Link> */}
 
