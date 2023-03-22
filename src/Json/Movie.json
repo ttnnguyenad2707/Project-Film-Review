@@ -1,48 +1,284 @@
-[{
+[
+  {
     "ID": 1,
     "Name": "Hành Động",
     "Movie": [
       {
         "ID": 1,
-        "Name": "Titanic",
-        "Thumbnail": "https://duhocvietglobal.com/wp-content/uploads/2018/12/dat-nuoc-va-con-nguoi-anh-quoc.jpg",
-        "Description": "Desc tinanci",
+        "Name": "John Wick",
+        "Thumbnail": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/3/26/892912/John-Wick-Phan-4.jpg",
+        "Description": "Desc John Wick",
         "AvgRating": 6,
         "Comment": [
           {
             "ID": 1,
             "UserID": 1,
             "Rating": 10,
-            "Content": "Comment"
+            "Content": "Comment 1"
           },
           {
             "ID": 2,
-            "UserID": 1,
+            "UserID": 2,
             "Rating": 10,
-            "Content": "Comment"
+            "Content": "Comment 2"
+          }
+        ]
+      },
+      {
+        "ID": 2,
+        "Name": "Batman",
+        "Thumbnail": "https://images2.thanhnien.vn/Uploaded/dotuan/2022_03_02/1-5531.jpg",
+        "Description": "Desc batman",
+        "AvgRating": 7,
+        "Comment": [
+          {
+            "ID": 3,
+            "UserID": 3,
+            "Rating": 10,
+            "Content": "Comment 2"
+          },
+          {
+            "ID": 4,
+            "UserID": 4,
+            "Rating": 10,
+            "Content": "Comment 3"
           }
         ]
       },
       {
         "ID": 3,
-        "Name": "Titanic",
-        "Thumbnail": "Http://",
-        "Description": "Desc tinanci",
-        "AvgRating": 6,
+        "Name": "Spiderman",
+        "Thumbnail": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/5359769168001/b74b48f9-6c13-452e-8776-ea1ab9074953/74b9774e-a415-4499-8f1a-26e5e0940ecd/1280x720/match/image.jpg",
+        "Description": "Desc spiderman",
+        "AvgRating": 7,
         "Comment": [
           {
             "ID": 5,
-            "UserID": 1,
+            "UserID": 3,
             "Rating": 10,
-            "Content": "Comment"
-          },
-          {
-            "ID": 5,
-            "UserID": 1,
-            "Rating": 10,
-            "Content": "Comment"
+            "Content": "Comment 5"
           }
         ]
       }
     ]
-  }]
+  },
+  {
+    "ID": 2,
+    "Name": "Tình cảm",
+    "Movie": [
+      {
+        "ID": 4,
+        "Name": "Titanic",
+        "Thumbnail": "https://media.timeout.com/images/100654045/image.jpg",
+        "Description": "Desc Titanic",
+        "AvgRating": 3,
+        "Comment": [
+          {
+            "ID": 6,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 5,
+        "Name": "Về nhà đi con",
+        "Thumbnail": "https://obj-cdn-static.vtvgiaitri.vn/ef/12/2e/07/da/4676/ve_nha_di_con_2605138_1920x1080.jpeg",
+        "Description": "Desc ve nha di con",
+        "AvgRating": 3,
+        "Comment": [
+          {
+            "ID": 7,
+            "UserID": 3,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 6,
+        "Name": "Bố già",
+        "Thumbnail": "https://i.ytimg.com/vi/Lz8nvVp3MNE/maxresdefault.jpg",
+        "Description": "Desc bo gia",
+        "AvgRating": 4,
+        "Comment": [
+          {
+            "ID": 8,
+            "UserID": 2,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 3,
+    "Name": "Kinh dị",
+    "Movie": [
+      {
+        "ID": 7,
+        "Name": "Anabelle",
+        "Thumbnail": "https://danviet.mediacdn.vn/zoom/700_438/2021/4/15/794-161845783939699016700-crop-16184581679311657620629.jpg",
+        "Description": "Desc Annabelle",
+        "AvgRating": 5.5,
+        "Comment": [
+          {
+            "ID": 9,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 7,
+        "Name": "Anabelle",
+        "Thumbnail": "https://danviet.mediacdn.vn/zoom/700_438/2021/4/15/794-161845783939699016700-crop-16184581679311657620629.jpg",
+        "Description": "Desc Annabelle",
+        "AvgRating": 5.5,
+        "Comment": [
+          {
+            "ID": 10,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 8,
+        "Name": "Đêm thứ 8",
+        "Thumbnail": "https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/7/5/maxresdefault-16254564208511617092627.jpg",
+        "Description": "Dem thu tam",
+        "AvgRating": 5.5,
+        "Comment": [
+          {
+            "ID": 11,
+            "UserID": 1,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 9,
+        "Name": "Black Phone",
+        "Thumbnail": "https://znews-photo.zingcdn.me/w660/Uploaded/vnaits/2022_06_23/l_intro_1651329163.jpg",
+        "Description": "The black phone",
+        "AvgRating": 10,
+        "Comment": [
+          {
+            "ID": 12,
+            "UserID": 5,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 4,
+    "Name": "Hoạt hình",
+    "Movie": [
+      {
+        "ID": 10,
+        "Name": "Conan",
+        "Thumbnail": "http://cdn.tgdd.vn/Files/2021/06/02/1356902/danh-sach-nhung-vu-an-hay-nhat-cua-phim-tham-tu-lung-danh-conan-202301181124070670.jpg",
+        "Description": "Desc Conan",
+        "AvgRating": 5.5,
+        "Comment": [
+          {
+            "ID": 13,
+            "UserID": 4,
+            "Rating": 10,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 11,
+        "Name": "Doreamon",
+        "Thumbnail": "https://vnw-img-cdn.popsww.com/api/v2/containers/file2/cms_thumbnails/doraemons9_07_horizontalposter-6c4d708980d3-1609395243354-9fo2xUfP.png",
+        "Description": "Desc Doreamon",
+        "AvgRating": 8,
+        "Comment": [
+          {
+            "ID": 14,
+            "UserID": 3,
+            "Rating": 5,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 12,
+        "Name": "One Piece",
+        "Thumbnail": "https://static2.vieon.vn/vieplay-image/carousel_web_v4/2021/02/24/f4rr6m16_1920x1080-onepiece_1920_1080.jpg",
+        "Description": "Desc onepiece",
+        "AvgRating": 4,
+        "Comment": [
+          {
+            "ID": 15,
+            "UserID": 3,
+            "Rating": 4,
+            "Content": "Comment 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 5,
+    "Name": "Khoa học",
+    "Movie": [
+      {
+        "ID": 13,
+        "Name": "Stowaway",
+        "Thumbnail": "https://cdn.vox-cdn.com/thumbor/6OOnM7KynkZVChxkI-wTsraVsvs=/0x0:3000x2003/1200x675/filters:focal(1260x762:1740x1242)/cdn.vox-cdn.com/uploads/chorus_image/image/69178987/Stowaway_03843r_f_rgb.0.jpg",
+        "Description": "Desc Stowaway",
+        "AvgRating": 5.5,
+        "Comment": [
+          {
+            "ID": 16,
+            "UserID": 4,
+            "Rating": 5.5,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 14,
+        "Name": "Godzilla",
+        "Thumbnail": "https://variety.com/wp-content/uploads/2021/03/Godzilla-vs-Kong.jpg?w=1000",
+        "Description": "Desc gozdilla",
+        "AvgRating": 3,
+        "Comment": [
+          {
+            "ID": 17,
+            "UserID": 2,
+            "Rating": 3,
+            "Content": "Comment 1"
+          }
+        ]
+      },
+      {
+        "ID": 15,
+        "Name": "Kingkong",
+        "Thumbnail": "https://znews-photo.zingcdn.me/w660/Uploaded/xbhunku/2017_03_12/kk1.jpg",
+        "Description": "Desc kingkong",
+        "AvgRating": 9,
+        "Comment": [
+          {
+            "ID": 18,
+            "UserID": 2,
+            "Rating": 9,
+            "Content": "Comment 1"
+          }
+        ]
+      }
+    ]
+  }
+]
