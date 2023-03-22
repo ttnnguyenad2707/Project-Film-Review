@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
-=======
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
->>>>>>> be836bb42ecf2490af0bc7a16adf19f28b0e1079
 import {
   BrowserRouter as Router,
   Route
