@@ -19,8 +19,7 @@ export default function Provider({ children })
     })
 
 
-    var userInfo = JSON.parse(sessionStorage.getItem('Account'))
-    var account = userInfo[0];
+   
     
     const value = {
         movie

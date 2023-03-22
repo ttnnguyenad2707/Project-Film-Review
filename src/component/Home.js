@@ -1,7 +1,7 @@
 import { Fragment, useContext, useState } from "react"
 import { Link } from "react-router-dom";
 import Category from '../Json/Movie.json'
-
+import ListFilm from "./ListFilm";
 export default function Home() {
 
     const [category, setCategory] = useState(Category)
@@ -41,8 +41,11 @@ export default function Home() {
                     <h1 style={{ color: "red" }} > Thể loại </h1> <hr />
                     {categoryLoad.map(cat =>
                         <Fragment>
-                            <a style={{color: "red"}} href="#">{cat.Name}</a>
+                            <Link to={`/ListFilm/${cat.ID}`}>
+                            
+                            <p style={{color: "red"}} >{cat.Name}</p>
                             <br></br>
+                            </Link>
                         </Fragment>
                     )}
                 </div>
