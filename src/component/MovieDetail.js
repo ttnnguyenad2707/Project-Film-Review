@@ -10,6 +10,9 @@ export default function MovieDetail() {
     const [content, setContent] = useState("");
     const [rating, setRating] = useState("");
     const [idCmt, setIDCmt] = useState("");
+    const [contentComment,setContentComment] = useState("");
+    const [rateComment,setRateComment] = useState()
+    const [isCmtState,setIsCmtState] = useState(false)
     const context = useContext(Context)
 
     var Account;
@@ -23,23 +26,56 @@ export default function MovieDetail() {
     const { MovieID } = useParams();
     const movieAll = context.movie;
     const movieDetail = movieAll.find(movie => movie.ID == MovieID)
+
+    var isCmt = false;
+
+    movieDetail.Comment.map(cmt => {
+        if (cmt.UserID == Account.ID){
+            isCmt = true
+        }
+    })
+    
+
+
+
     const handleEditCmt = (content, rating, id) => {
         setContent(content)
         setRating(rating)
         setIDCmt(id)
         setShowEditCmt(!showEditCmt)
-
-
-
-
-
+    }
+    const handleAddComment = (e)=>{
+        e.preventDefault();
+        
+        let category = context.category;
+        console.log(category);
+        for (let i = 0;i<category.length;i++){
+            console.log(category.length);
+            if (category[i].Name == movieDetail.Category) {
+                
+                for (let j = 0;j<category[i].Movie.length;j++){
+                    if (category[i].Movie[j].ID == MovieID) {
+                        let ObjNew = {
+                            "ID": category[i].Movie[j].Comment.length+1,
+                            "UserID": Account.ID,
+                            "Rating": rateComment,
+                            "Content": contentComment,
+                        }
+                        console.log(ObjNew);
+                        category[i].Movie[j].Comment.push(ObjNew)
+                    }
+                }
+            }
+        }
+        console.log(category);
+        context.setCategory(category) 
+        localStorage.setItem("Category",JSON.stringify(category));
+        setIsCmtState(true);
     }
     const handleSaveCmt = () => {
         setShowEditCmt(!showEditCmt)
         let category = context.category;
-        let indexCategory;
-        let indexMovie;
-
+        console.log(category);
         for (let i = 0;i<category.length;i++){
             
             if (category[i].Name == movieDetail.Category) {
@@ -48,42 +84,28 @@ export default function MovieDetail() {
                     if (category[i].Movie[j].ID == MovieID) {
                         for (let k = 0;k<category[i].Movie[j].Comment.length;k++){
                             if (category[i].Movie[j].Comment[k].ID == idCmt) {
+                                console.log(category[i].Movie[j].Comment[k]);
+                                
                                 let ObjNew = {
                                     "ID": idCmt,
                                     "UserID": Account.ID,
                                     "Rating": rating,
                                     "Content": content,
                                 }
-                                category[i].Movie[i].Comment[k] = ObjNew;
+                                
+                                category[i].Movie[j].Comment[k] = ObjNew;
                             }
                         }
                     }
                 }
             }
         }
+        
+        
 
-        // category.forEach(category => {
-        //     if (category.Name == movieDetail.Category) {
-                
-        //         category.Movie.forEach(movie => {
-        //             if (movie.ID == MovieID) {
-        //                 movie.Comment.forEach(cmt => {
-        //                     if (cmt.id == idCmt) {
-        //                         let ObjNew = {
-        //                             "ID": idCmt,
-        //                             "UserID": Account.ID,
-        //                             "Rating": rating,
-        //                             "Content": content,
-        //                         }
-
-        //                     }
-        //                 })
-        //             }
-        //         })
-        //     }
-
-        // });
+        
         localStorage.setItem("Category",JSON.stringify(category));
+        context.setCategory(category)
         
 
     }
@@ -122,7 +144,7 @@ export default function MovieDetail() {
                         <hr />
                         <h2>Bình luận: </h2>
                         <ul>
-                            {movieDetail.Comment.length != 0 &&
+                            {isCmt == true  &&movieDetail.Comment.length != 0 &&
                                 movieDetail.Comment.map(comment => {
 
                                     return (
@@ -130,15 +152,15 @@ export default function MovieDetail() {
                                             {comment.UserID != Account.ID && (
                                                 <Fragment>
                                                     <p>{getUserByID(comment.UserID).FullName} </p>
-                                                    <p>{comment.Content}</p>
-                                                    <p>{comment.Rating}</p>
+                                                    <p>Content: {comment.Content}</p>
+                                                    <p>Rate Point: {comment.Rating}</p>
                                                 </Fragment>
                                             )}
                                             {showEditCmt == false && comment.UserID == Account.ID && (
                                                 <Fragment>
                                                     <p>{getUserByID(comment.UserID).FullName} </p>
-                                                    <p>{comment.Content}</p>
-                                                    <p>{comment.Rating}</p>
+                                                    <p>Content: {comment.Content}</p>
+                                                    <p>Rate Point: {comment.Rating}</p>
 
                                                 </Fragment>
                                             )}
@@ -149,8 +171,10 @@ export default function MovieDetail() {
 
 
                                                         <p>{getUserByID(comment.UserID).FullName} </p>
-                                                        <input value={content} onChange={e => setContent(e.target.value)} ></input>
-                                                        <input value={rating} onChange={e => setRating(e.target.value)}></input>
+                                                        <div className="w-100">
+                                                            <label className="w-25">Content</label><textarea className="w-75" value={content} onChange={e => setContent(e.target.value)} ></textarea>
+                                                            <label className="w-25">Rate Point</label><input className="w-75" value={rating} onChange={e => setRating(e.target.value)}></input>
+                                                        </div>
 
                                                     </Fragment>
                                                 )
@@ -162,8 +186,15 @@ export default function MovieDetail() {
                                     )
                                 })
                             }
+                            
                         </ul>
-
+                        {isCmt == false && (
+                                <form className="row" onSubmit={handleAddComment}>
+                                    <textarea className="col-12" type="text" onChange={e => setContentComment(e.target.value)} placeholder="Comment"></textarea>
+                                    <input className="col-3" type="number" onChange={e => setRateComment(e.target.value)} placeholder="Rating"></input>
+                                    <input type="submit" value="Comment"></input>
+                                </form>
+                            )}
 
 
                     </div>

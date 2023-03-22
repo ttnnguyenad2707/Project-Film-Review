@@ -8,9 +8,11 @@ const Context = createContext();
 export default function Provider({ children })
 
 {
-
-    localStorage.setItem("Category",JSON.stringify(Category));
+    useEffect(()=>{
+        localStorage.setItem("Category",JSON.stringify(Category))
+    },[])
     const categoryList=JSON.parse(localStorage.getItem("Category"))
+    
     const [category,setCategory] = useState(categoryList);
     
     const [account,setAccount] = useState();

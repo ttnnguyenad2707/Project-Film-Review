@@ -16,5 +16,14 @@
         "PhoneNumber": "012345678",
         "Gender": "Male",
         "Address": "Hung Yen"
+    },
+    {
+        "ID" : 3,
+        "FullName": "Nguyen",
+        "Password": "1234",
+        "Email": "admin12@gmail.com",
+        "PhoneNumber": "012345678",
+        "Gender": "Male",
+        "Address": "Hung Yen"
     }
 ]
