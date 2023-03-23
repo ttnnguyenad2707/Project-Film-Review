@@ -26,6 +26,7 @@ export default function Provider({ children })
     })
     
 
+   
     
     const value = {
         movie,

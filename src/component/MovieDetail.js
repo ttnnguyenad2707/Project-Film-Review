@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { Fragment, useContext, useState } from "react"
+import { Fragment, useContext, useEffect, useState } from "react"
 import { Context } from "../Context";
 import Category from '../Json/Movie.json'
 import ListAccount from '../Json/Account.json'
@@ -112,11 +112,16 @@ export default function MovieDetail() {
 
 
 
-
-
-
+    useEffect(() => {
+        localStorage.setItem("dataUser",JSON.stringify(ListAccount))       
+        
+    },[])
+    const getData = JSON.parse(localStorage.getItem('dataUser'));
+    const [accountS, setAccountS] = useState(getData);
+console.log(accountS);
+    
     const getUserByID = (id) => { return ListAccount.find(account => account.ID == id) }
-
+    console.log(getUserByID(2));
 
     return (
 
@@ -144,7 +149,7 @@ export default function MovieDetail() {
                         <hr />
                         <h2>Bình luận: </h2>
                         <ul>
-                            {isCmt == true  &&movieDetail.Comment.length != 0 &&
+                            {isCmt == true  && movieDetail.Comment.length != 0 &&
                                 movieDetail.Comment.map(comment => {
 
                                     return (

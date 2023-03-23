@@ -1,16 +1,18 @@
 import { Fragment, useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import Category from '../Json/Movie.json'
-
+import AccountList from '../Json/Account.json';
+import ListFilm from "./ListFilm";
 export default function Home() {
-
     const [category, setCategory] = useState(Category)
+    const [account, setaccount] = useState(AccountList);
     //load movie
 
     const [categoryLoad, setCategoryLoad] = useState(Category)
     const [showSearch, setShowSearch] = useState(false)
     const [movie, setMovie] = useState([])
-    
+    const saveAccount = JSON.stringify(account);
+    localStorage.setItem("dataUser", saveAccount);
     const handleSearch = (search) => {
 
         if (search == "") {
@@ -42,15 +44,18 @@ export default function Home() {
 
     return (
 
-        <div className="container-fluid">
+        <div className="container">
 
             <div className="row">
                 <div className="col-md-2">
                     <h1 style={{ color: "red" }} > Thể loại </h1> <hr />
                     {categoryLoad.map(cat =>
                         <Fragment>
-                            <a style={{color: "red"}} href="#">{cat.Name}</a>
+                            <Link to={`/ListFilm/${cat.ID}`}>
+                            
+                            <p style={{color: "red"}} >{cat.Name}</p>
                             <br></br>
+                            </Link>
                         </Fragment>
                     )}
                 </div>
